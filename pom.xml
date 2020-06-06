@@ -104,7 +104,7 @@
 
 	</dependencies>
 
-	<!-- Permite gerar um .jar ou .war executável -->
+	<!-- Permite gerar um .jar ou .war executável (linha de comando). Também chamado de Fat jar -->
 	<build>
 		<plugins>
 			<plugin>
