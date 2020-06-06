@@ -18,14 +18,19 @@ public class Configuracao {
 	 * É através da anotação @Bean que o Spring Boot sabe que ele deve gerenciar
 	 * esse bean. Assim é possível usa-lo onde desejar dentro da aplicação atráves
 	 * da injeção de dependencia.
+	 * 
+	 * Alteração: toda configuração de base de dados está sendo realizada em:
+	 * src/main/resources/application.properties
+	 * 
+	 * Contudo, é bom saber que é possível configurar a base de dados pelo código
+	 * Java.
 	 */
-	@Bean
-	public DataSource dataSource() {
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName("org.postgresql.Driver");
-		dataSource.setUrl("jdbc:postgresql://localhost:5432/alura_springboot");
-		dataSource.setUsername("usuarioteste");
-		dataSource.setPassword("teste123");
-		return dataSource;
-	}
+	/*
+	 * @Bean public DataSource dataSource() { DriverManagerDataSource dataSource =
+	 * new DriverManagerDataSource();
+	 * dataSource.setDriverClassName("org.postgresql.Driver");
+	 * dataSource.setUrl("jdbc:postgresql://localhost:5432/alura_springboot");
+	 * dataSource.setUsername("usuarioteste"); dataSource.setPassword("teste123");
+	 * return dataSource; }
+	 */
 }
